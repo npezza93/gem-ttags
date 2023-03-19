@@ -52,7 +52,7 @@ class Gem::Commands::TtagsCommand < Gem::Command
 
     def inject(gem_path, spec, ui)
       target = gem_path.join("lib/bundler/cli.rb")
-      return unless target.writable? && target.read.exclude?("load_plugins")
+      return unless target.writable? && !target.read.include?("load_plugins")
 
       ui&.say "Injecting gem-ttags into #{spec.full_name}"
       target.open("a") do |f|
