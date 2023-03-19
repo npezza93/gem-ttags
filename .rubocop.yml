@@ -1,7 +1,6 @@
 require:
   - rubocop-minitest
   - rubocop-performance
-  - rubocop-rails
 AllCops:
   NewCops: enable
   Exclude:
@@ -1696,56 +1695,6 @@ Performance/Squeeze:
   Enabled: true
 Performance/StringInclude:
   Enabled: true
-Rails/ActiveRecordCallbacksOrder:
-  Enabled: true
-Rails/FindById:
-  Enabled: true
-Rails/Inquiry:
-  Enabled: false
-Rails/MailerName:
-  Enabled: true
-Rails/MatchRoute:
-  Enabled: true
-Rails/NegateInclude:
-  Enabled: true
-Rails/Pluck:
-  Enabled: true
-Rails/PluckInWhere:
-  Enabled: true
-Rails/RenderInline:
-  Enabled: true
-Rails/RenderPlainText:
-  Enabled: true
-Rails/ShortI18n:
-  Enabled: true
-Rails/WhereExists:
-  Enabled: true
-Rails/SkipsModelValidations:
-  Enabled: false
-Rails/UniqueValidationWithoutIndex:
-  Enabled: false
-Rails/InverseOf:
-  Enabled: false
-Rails/LexicallyScopedActionFilter:
-  Enabled: false
-Minitest/MultipleAssertions:
-  Enabled: false
-Rails/OutputSafety:
-  Enabled: false
-Naming/BlockForwarding:
-  Enabled: false
-Rails/ReversibleMigration:
-  Enabled: false
-Rails/I18nLocaleTexts:
-  Enabled: false
-Rails/MigrationClassName:
-  Enabled: false
-Rails/BulkChangeTable:
-  Enabled: false
-Rails/DotSeparatedKeys:
-  Enabled: false
-Rails/AttributeDefaultBlockValue:
-  Enabled: false
 
 Naming/MethodParameterName:
   Enabled: false
