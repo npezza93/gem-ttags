@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "gem-ttags"
-  spec.version = "1.0.5"
+  spec.version = "1.0.6"
   spec.authors = ["Nick Pezza"]
   spec.email = ["pezza@hey.com"]
 
