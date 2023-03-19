@@ -34,7 +34,6 @@ class Gem::Commands::TtagsCommand < Gem::Command
       paths = spec.require_paths.flat_map do |p|
         Dir.glob(gem_path.join(p, "**/*.rb"))
       end
-      puts "#{gem_path} #{paths.any?} #{can_write?(tag_file)}"
       if paths.any? && can_write?(tag_file)
         ui&.say "Generating ttags for #{spec.full_name}"
         invoke(tag_file, *paths)
