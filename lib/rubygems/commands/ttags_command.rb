@@ -9,11 +9,7 @@ class Gem::Commands::TtagsCommand < Gem::Command
   end
 
   def execute
-    if Gem::Specification.respond_to?(:each)
-      Gem::Specification
-    else
-      Gem.source_index.gems.values
-    end.each { |spec| self.class.index(spec, ui) }
+    Gem::Specification.each { |spec| self.class.index(spec, ui) }
   end
 
   class << self
@@ -36,6 +32,7 @@ class Gem::Commands::TtagsCommand < Gem::Command
 
       tag_file = gem_path.join("tags")
       paths = spec.require_paths.map { |p| gem_path.join(p) }
+      puts "#{gem_path} #{paths}"
       if paths.any? && can_write?(tag_file)
         ui&.say "Generating ttags for #{spec.full_name}"
         invoke(tag_file, *paths)
