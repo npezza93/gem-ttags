@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/gem/ttags/version"
-
 Gem::Specification.new do |spec|
   spec.name = "gem-ttags"
-  spec.version = Gem::Ttags::VERSION
+  spec.version = "1.0.1"
   spec.authors = ["Nick Pezza"]
   spec.email = ["pezza@hey.com"]
 
